@@ -243,9 +243,9 @@ class AutoTag(object):  # pylint: disable=R0902
             sources = [os.path.join(self.parents + s) for s in sources]
         self.stripTags(tags_file, sources)
         if self.tags_file:
-            cmd = "%s -f %s -a " % (self.ctags_cmd, self.tags_file)
+            cmd = "%s -f %s -R --sort=yes --c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+liasS --extra=+q  ." % (self.ctags_cmd, self.tags_file)
         else:
-            cmd = "%s -a " % (self.ctags_cmd,)
+            cmd = "%s  -R --sort=yes --c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+liasS --extra=+q ." % (self.ctags_cmd,)
         for source in sources:
             if os.path.isfile(os.path.join(tags_dir, self.tags_dir, source)):
                 cmd += ' "%s"' % source
