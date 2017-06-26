@@ -1,6 +1,14 @@
 autotag.vim
 ============
 
+** important!!!!! **
+This Repo is forked from https://github.com/craigemery/vim-autotag, the original repo will generate tags via 'ctags -a' which means appending tags to tags files.
+
+I modified it to regenerate tags for the whole project, while the edited file is saved.
+This maybe very slow for big projects.
+
+------------
+
 If you use ctags to make tags files of your source, it's nice to be able to re-run ctags on a source file when you save it.
 
 However, using ctags -a will only change existing entries in a tags file or add new ones. It doesn't delete entries that no longer exist. Should you delete an entity from your source file that's represented by an entry in a tags file, that entry will remain after calling ctags -a.
