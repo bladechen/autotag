@@ -1,7 +1,7 @@
 autotag.vim
 ============
 
-** important!!!!! **
+__important!!!!!__
 This Repo is forked from https://github.com/craigemery/vim-autotag, the original repo will generate tags via 'ctags -a' which means appending tags to tags files.
 
 I modified it to regenerate tags for the whole project, while the edited file is saved.
